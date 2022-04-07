@@ -2,6 +2,7 @@
   <div>
     <PrimeiroComponente />
     <LifeCycle />
+    <Pessoa/>
   </div>
   
   
@@ -22,3 +23,13 @@
   }
 
 </script>
+
+<style>
+ body {
+   background-color: beige;
+ }
+
+ a {
+   color: red;
+ }
+</style>
