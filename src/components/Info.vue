@@ -1,5 +1,6 @@
 <template>
     <div>
+        <p>{{compEmail}}</p>
         <p v-if="trabalhando">Trabalhando...</p>
         <p v-else>Não estou trabalhando </p>
         <p>Usando VueJS 3!!</p>
@@ -8,15 +9,21 @@
 
         <p>Para acessar meu portifolio clique aqui <a v-bind:href="meu_link">AQUI</a> </p>
         <Picture2/>
+
+        <Form/>
     </div>
 </template>
 
 
 <script>
 import Picture2 from './Picture2.vue'
+import Form from './form/Form.vue'
 
 export default {
     name: 'Info',
+    props: {
+        compEmail: String
+    },
     data() {
         return {
             trabalhando: true,
@@ -24,7 +31,8 @@ export default {
         }
     },
     components: {
-        Picture2
+        Picture2,
+        Form
     },
     methods: {
         showEmail() {

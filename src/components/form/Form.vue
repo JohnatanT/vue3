@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form action="">
+        <form @submit="enviarFormulario($event)">
            <InputTextForm/>
            <InputTextForm/>
            <SubmitForm/>
@@ -18,6 +18,13 @@ export default {
     components: {
         InputTextForm, 
         SubmitForm
-    }
+    },
+    methods: {
+        enviarFormulario(e) {
+            e.preventDefault();
+            
+            alert('Formulario enviado');
+        }
+    },
 }
 </script>

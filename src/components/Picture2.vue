@@ -1,8 +1,14 @@
 <template>
-    <img :src="avatar" :alt="decricao">
+    <div>
+        <img :src="avatar" :alt="decricao">
+        <MudarImagem @mudar-imagem="trocarImagem" />
+    </div>
+    
 </template>
 
 <script>
+import MudarImagem from './MudarImagem.vue'
+
 export default {
     name: 'Picture2',
     data() {
@@ -10,6 +16,14 @@ export default {
             avatar: require('@/assets/logo.png'),
             decricao: "logo Vue"
         }
-    }
+    },
+    components: {
+        MudarImagem
+    },
+    methods: {
+        trocarImagem() {
+            alert('Trocou')
+        }
+    },
 }
 </script>
